@@ -31,7 +31,7 @@ export default function Hero() {
                 liquid={0.75}
                 mouseAnimation={false}
                 brightness={2}
-                contrast={0.5}
+                contrast={1.5}
                 refraction={0.01}
                 blur={0.015}
                 chromaticSpread={2}
