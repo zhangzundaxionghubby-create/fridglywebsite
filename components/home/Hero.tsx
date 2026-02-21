@@ -22,7 +22,7 @@ export default function Hero() {
             {/* MetallicPaint Logo */}
             <div className="mx-auto mb-8 h-[200px] w-[200px] sm:h-[280px] sm:w-[280px]">
               <MetallicPaint
-                imageSrc="/fridglylogo-metallic.png"
+                imageSrc="/fridglylogo.png"
                 seed={42}
                 scale={4}
                 patternSharpness={1}
