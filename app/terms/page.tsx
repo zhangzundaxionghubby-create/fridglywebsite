@@ -50,9 +50,9 @@ export default function TermsPage(): JSX.Element {
 
         <div className="prose prose-neutral mt-8 max-w-none">
           <p>
-            These Terms of Use (“Terms”) govern your access to and use of the Fridgly
-            mobile application (the “App”) and related services (collectively, the
-            “Service”). By downloading, accessing, or using the Service, you agree to
+            These Terms of Use ("Terms") govern your access to and use of the Fridgly
+            mobile application (the "App") and related services (collectively, the
+            "Service"). By downloading, accessing, or using the Service, you agree to
             be bound by these Terms.
           </p>
 
@@ -60,14 +60,12 @@ export default function TermsPage(): JSX.Element {
 
           <SectionH2 label="1.">About Fridgly</SectionH2>
           <p>
-            The Service is operated by <strong>Fridgly</strong> (“Fridgly”, “we”, “us”,
-            “our”).
+            The Service is operated by <strong>Fridgly</strong> ("Fridgly", "we", "us",
+            "our").
           </p>
-          <ul className="space-y-2">
-            <li>
-              <Term>Contact:</Term> <em>[davidzhang.businesshelping@gmail.com]</em>
-            </li>
-          </ul>
+          <p>
+            <Term>Contact:</Term> davidzhang.businesshelping@gmail.com
+          </p>
 
           <SectionH2 label="2.">Eligibility</SectionH2>
           <p>
@@ -81,9 +79,7 @@ export default function TermsPage(): JSX.Element {
           <SectionH3 label="3.1">Registration</SectionH3>
           <p>
             To use certain features, you may need to create an account. You agree to
-            provide accurate and up-to-date information, including where applicable
-            your name, email address, phone number, mailing address, billing address,
-            and age.
+            provide accurate and up-to-date information, including your name and email address.
           </p>
 
           <SectionH3 label="3.2">Account Security</SectionH3>
@@ -93,11 +89,12 @@ export default function TermsPage(): JSX.Element {
             Notify us immediately if you suspect unauthorised use.
           </p>
 
-          <SectionH3 label="3.3">Google Login</SectionH3>
+          <SectionH3 label="3.3">Social Login (Google and Apple)</SectionH3>
           <p>
-            If you sign up or log in using Google, you authorise us to receive
-            information from Google as needed to authenticate you and create your
-            account.
+            If you sign up or log in using Google or Apple, you authorise us to receive
+            information from the relevant provider (such as your name and email address)
+            as needed to authenticate you and create your account. We do not receive or
+            store your social login password.
           </p>
 
           <SectionH3 label="3.4">Managing Your Account</SectionH3>
@@ -107,43 +104,17 @@ export default function TermsPage(): JSX.Element {
           </p>
 
           <SectionH2 label="4.">Subscriptions and Recurring Payments</SectionH2>
-
-          <SectionH3 label="4.1">Paid Features</SectionH3>
           <p>
-            Fridgly may offer subscriptions or other paid features (“Subscription”).
-            Subscription benefits and pricing will be displayed in the App before
-            purchase.
+            Fridgly is currently free to use. In the future, we may introduce subscriptions
+            or other paid features ("Subscription"). If and when paid features become available:
           </p>
-
-          <SectionH3 label="4.2">Billing and Renewal</SectionH3>
-          <p>
-            Subscriptions are recurring and will automatically renew unless cancelled
-            before the end of the current billing period. The renewal price will be
-            charged to your selected payment method or via the applicable app store
-            billing system.
-          </p>
-
-          <SectionH3 label="4.3">Cancellations</SectionH3>
-          <p>
-            You can cancel renewal at any time through your account settings in the
-            relevant app store or payment platform used to purchase the Subscription.
-            Cancellation takes effect at the end of the current billing period, and you
-            will continue to have access until then.
-          </p>
-
-          <SectionH3 label="4.4">Refunds</SectionH3>
-          <p>
-            Refunds (if any) are handled according to the policies of the platform or
-            provider you used to purchase (e.g., Apple App Store / Google Play / payment
-            processor). We do not control third-party refund decisions.
-          </p>
-
-          <SectionH3 label="4.5">Price Changes</SectionH3>
-          <p>
-            We may change Subscription pricing from time to time. Where required, we
-            will notify you in advance and the new price will apply at the next renewal
-            after notice.
-          </p>
+          <ul className="space-y-2">
+            <li>Subscription benefits and pricing will be displayed in the App before purchase.</li>
+            <li>Subscriptions will be recurring and will automatically renew unless cancelled before the end of the current billing period.</li>
+            <li>You will be able to cancel renewal at any time through the relevant app store or payment platform.</li>
+            <li>Refunds (if any) will be handled according to the policies of the platform you used to purchase (e.g., Apple App Store / Google Play).</li>
+            <li>We may change pricing from time to time. Where required, we will notify you in advance.</li>
+          </ul>
 
           <SectionH2 label="5.">Emails and Communications</SectionH2>
 
@@ -155,8 +126,9 @@ export default function TermsPage(): JSX.Element {
 
           <SectionH3 label="5.2">Marketing Emails (Opt-in)</SectionH3>
           <p>
-            If you opt in, we may send newsletters or promotional communications. You
-            can unsubscribe at any time using the unsubscribe link in the email.
+            In the future, we may offer opt-in newsletters or promotional communications.
+            If introduced, you will be able to unsubscribe at any time using the unsubscribe
+            link in the email.
           </p>
 
           <SectionH2 label="6.">Permissions (Camera and Photo Gallery)</SectionH2>
@@ -179,7 +151,7 @@ export default function TermsPage(): JSX.Element {
           <SectionH3 label="8.1">Your Content</SectionH3>
           <p>
             You may be able to submit, upload, store, or create content in the App
-            (e.g., recipes, images, pantry items, notes) (“User Content”). You are
+            (e.g., recipes, images, pantry items, notes) ("User Content"). You are
             responsible for your User Content and for ensuring you have the rights to
             upload it.
           </p>
@@ -203,7 +175,7 @@ export default function TermsPage(): JSX.Element {
           <p>You agree not to:</p>
           <ul className="space-y-2">
             <li>Use the Service for unlawful purposes or in violation of applicable laws</li>
-            <li>Attempt to gain unauthorised access to the Service or other users’ accounts</li>
+            <li>Attempt to gain unauthorised access to the Service or other users' accounts</li>
             <li>
               Reverse engineer, decompile, or attempt to extract source code (except
               where permitted by law)
@@ -217,12 +189,25 @@ export default function TermsPage(): JSX.Element {
             violated these Terms.
           </p>
 
-          <SectionH2 label="10.">Health and Nutrition Disclaimer</SectionH2>
+          <SectionH2 label="10.">Health, Nutrition, and AI-Generated Content Disclaimer</SectionH2>
           <p>
             Fridgly provides tools to help you organise food preferences, recipes, and
             nutrition-related tracking. The Service is for informational purposes only
             and is not medical advice.
           </p>
+
+          <SectionH3 label="10.1">AI-Generated Content</SectionH3>
+          <p>
+            Many features of the Service use artificial intelligence (AI) to generate
+            content, including but not limited to: recipe suggestions, cooking steps,
+            nutritional and macro estimates, shopping lists, and ingredient extraction
+            from images. AI-generated content may be inaccurate, incomplete, or
+            unsuitable for your specific needs. You should always verify nutritional
+            information, ingredient lists, and cooking instructions independently
+            before relying on them.
+          </p>
+
+          <SectionH3 label="10.2">Medical Disclaimer</SectionH3>
           <p>
             If you have a medical condition, allergies, dietary needs, or health
             concerns, consult a qualified healthcare professional before making dietary
@@ -241,10 +226,18 @@ export default function TermsPage(): JSX.Element {
 
           <SectionH2 label="12.">Third-Party Services</SectionH2>
           <p>
-            The Service may integrate with third-party services (such as Google login
-            and app store payment systems). Your use of those services may be governed
-            by their own terms and policies. Fridgly is not responsible for third-party
-            services.
+            The Service integrates with third-party services, including but not limited to:
+          </p>
+          <ul className="space-y-2">
+            <li><Term>Authentication providers</Term> — Google and Apple (for social login)</li>
+            <li><Term>AI service providers</Term> — OpenAI and other large language model providers via OpenRouter (for recipe generation, nutritional estimation, image analysis, and other AI-powered features)</li>
+            <li><Term>Analytics</Term> — PostHog (for product analytics, hosted in the EU)</li>
+            <li><Term>Image providers</Term> — Pexels (for reference images)</li>
+            <li><Term>Cloud infrastructure</Term> — Supabase (for authentication, database, storage, and serverless functions)</li>
+          </ul>
+          <p>
+            Your use of those services may be governed by their own terms and policies.
+            Fridgly is not responsible for third-party services.
           </p>
 
           <SectionH2 label="13.">Termination</SectionH2>
@@ -260,7 +253,7 @@ export default function TermsPage(): JSX.Element {
 
           <SectionH2 label="14.">Disclaimer of Warranties</SectionH2>
           <p>
-            The Service is provided on an “as is” and “as available” basis. To the
+            The Service is provided on an "as is" and "as available" basis. To the
             maximum extent permitted by law, we make no warranties, express or implied,
             including fitness for a particular purpose, accuracy, and non-infringement.
           </p>
@@ -281,27 +274,24 @@ export default function TermsPage(): JSX.Element {
           <SectionH2 label="16.">Changes to These Terms</SectionH2>
           <p>
             We may update these Terms from time to time. We will post updated Terms and
-            update the “Last updated” date. If changes are material, we may notify you
+            update the "Last updated" date. If changes are material, we may notify you
             within the App or by email.
           </p>
 
           <SectionH2 label="17.">Governing Law and Jurisdiction</SectionH2>
           <p>
-            These Terms are governed by the laws of <em>England and Wales</em>.
-            Courts located in <em>England and Wales</em> will have
+            These Terms are governed by the laws of England and Wales.
+            Courts located in England and Wales will have
             jurisdiction, except where consumer protection laws in your country require
             otherwise.
           </p>
 
           <SectionH2 label="18.">Contact Us</SectionH2>
           <p>If you have questions about these Terms, contact us at:</p>
-          <ul className="space-y-2">
-            <li>
-              <Term>Email:</Term> <em>[davidzhang.businesshelping@gmail.com, samuelcch9@gmail.com]</em>
-            </li>
-          </ul>
+          <p>
+            <Term>Email:</Term> davidzhang.businesshelping@gmail.com, samuelcch9@gmail.com
+          </p>
 
-          {/* NEW SECTION */}
           <SectionH2 label="19.">Assumption of Risk (Food Preparation and Use)</SectionH2>
           <p>
             You acknowledge that preparing, cooking, handling, and consuming food
