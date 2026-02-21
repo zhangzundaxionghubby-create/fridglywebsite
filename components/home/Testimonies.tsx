@@ -132,27 +132,6 @@ export default function TestimonialsMarquee() {
         </div>
       </div>
 
-      {/* Scoped CSS for marquee animation + reduced motion */}
-      <style jsx>{`
-        .marquee-track {
-          animation: marquee 45s linear infinite;
-          will-change: transform;
-        }
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .marquee-track {
-            animation: none;
-            transform: none;
-          }
-        }
-      `}</style>
     </section>
   );
 }

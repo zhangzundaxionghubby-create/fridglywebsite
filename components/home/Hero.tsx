@@ -23,7 +23,7 @@ export default function Hero() {
             </h1>
 
             <p className="mx-auto mt-3 max-w-2xl text-base text-neutral-600 sm:text-lg">
-              An AI-powered nutritionist that makes your cooking easier
+              Simplify and Personalize Your Cooking with Fridgly
             </p>
 
             <div className="mt-6 flex items-center justify-center gap-3">
@@ -39,13 +39,7 @@ export default function Hero() {
 
               <a
                 href="#features"
-                className="
-                  inline-flex items-center justify-center rounded-full
-                  border border-black/10 bg-[#FBF8F2] px-6 py-3 text-sm font-semibold text-neutral-900
-                  transition
-                  hover:bg-[#F6F1E7]
-                  focus:outline-none focus:ring-4 focus:ring-emerald-500/25 focus:ring-offset-2 focus:ring-offset-white
-                "
+                className="inline-flex items-center justify-center rounded-full border border-black/10 bg-[#FBF8F2] px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-[#F6F1E7] focus:outline-none focus:ring-4 focus:ring-emerald-500/25 focus:ring-offset-2 focus:ring-offset-white"
               >
                 See features
               </a>
