@@ -7,10 +7,10 @@ export default function Footer() {
           <div>
             <div className="text-sm font-semibold text-neutral-950">Fridgly</div>
             <p className="mt-1 text-sm text-neutral-600">
-              AI-powered nutritionist for simpler cooking.
+              Simplify and personalize.
             </p>
             <p className="mt-4 text-xs text-neutral-500">
-              © {new Date().getFullYear()} Fridgly. All rights reserved.
+              © {new Date().getFullYear()} Fridgly.
             </p>
           </div>
 
