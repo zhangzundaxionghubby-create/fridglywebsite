@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import MetallicPaint from "@/components/animation/MetallicPaint";
 
 export default function Hero() {
   return (
@@ -19,33 +18,6 @@ export default function Hero() {
             transition={{ duration: 0.28, ease: "easeOut" }}
             className="text-center"
           >
-            {/* MetallicPaint Logo */}
-            <div className="mx-auto mb-8 h-[200px] w-[200px] sm:h-[280px] sm:w-[280px]">
-              <MetallicPaint
-                imageSrc="/fridglylogo-metallic.png"
-                seed={42}
-                scale={4}
-                patternSharpness={1}
-                noiseScale={0.5}
-                speed={0.3}
-                liquid={0.75}
-                mouseAnimation={false}
-                brightness={2}
-                contrast={1.5}
-                refraction={0.01}
-                blur={0.015}
-                chromaticSpread={2}
-                fresnel={1}
-                angle={0}
-                waveAmplitude={1}
-                distortion={1}
-                contour={0.2}
-                lightColor="#ffffff"
-                darkColor="#000000"
-                tintColor="#F6F1E7"
-              />
-            </div>
-
             <h1 className="text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
               Welcome to Fridgly
             </h1>
