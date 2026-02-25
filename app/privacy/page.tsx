@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Privacy Policy for Fridgly.",
 };
 
-const LAST_UPDATED = "18 February 2026";
+const LAST_UPDATED = "25 February 2026";
 
 type HeadingProps = {
   label: string;
@@ -159,7 +159,9 @@ export default function PrivacyPage(): JSX.Element {
           <SectionH3 label="2.4">Photographs and Camera Data</SectionH3>
           <p>
             Certain features of the Service use your Device camera or photo library.
-            We request the relevant permission before accessing either. Specifically:
+            We request the relevant permission before accessing either and only access
+            your camera or photo library when you actively initiate a feature that
+            requires it. Specifically:
           </p>
           <div className="overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -176,25 +178,25 @@ export default function PrivacyPage(): JSX.Element {
                   <td className="py-2 pr-4">Receipt / fridge scanning (adding pantry items)</td>
                   <td className="text-center py-2 px-2">✅</td>
                   <td className="text-center py-2 px-2">✅</td>
-                  <td className="py-2 pl-4">Uploaded to our secure cloud storage; sent to an AI vision model for item extraction; stored for reference</td>
+                  <td className="py-2 pl-4">Uploaded to our secure cloud storage; sent to an AI vision model (GPT-4o via OpenRouter) for item extraction; stored for reference. Example: you photograph a grocery receipt or the inside of your fridge and Fridgly automatically identifies and adds the items to your pantry.</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Meal photo macro estimation (nutrition logging)</td>
                   <td className="text-center py-2 px-2">✅</td>
                   <td className="text-center py-2 px-2">—</td>
-                  <td className="py-2 pl-4">Uploaded to our secure cloud storage; sent to an AI vision model for nutritional estimation; stored for reference</td>
+                  <td className="py-2 pl-4">Uploaded to our secure cloud storage; sent to an AI vision model (GPT-4o via OpenRouter) for nutritional estimation; stored for reference. Example: you photograph a plate of food and Fridgly estimates its calorie and macro content.</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Screenshot recipe import</td>
                   <td className="text-center py-2 px-2">—</td>
                   <td className="text-center py-2 px-2">✅</td>
-                  <td className="py-2 pl-4">Sent as a temporary, base64-encoded payload to an AI vision model for recipe extraction; <strong>not</strong> stored on our servers after processing</td>
+                  <td className="py-2 pl-4">Sent as a temporary, base64-encoded payload to an AI vision model (GPT-4o-mini via OpenRouter) for recipe extraction; <strong>not</strong> stored on our servers after processing. Example: you select a screenshot of a recipe from your camera roll and Fridgly extracts the ingredients and cooking steps.</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Feedback / bug report attachments</td>
                   <td className="text-center py-2 px-2">—</td>
                   <td className="text-center py-2 px-2">✅</td>
-                  <td className="py-2 pl-4">Uploaded to our secure cloud storage alongside your feedback text; stored for support purposes</td>
+                  <td className="py-2 pl-4">Uploaded to our secure cloud storage alongside your feedback text; stored for support purposes. Example: you attach a screenshot showing a display issue when submitting a bug report.</td>
                 </tr>
               </tbody>
             </table>
@@ -284,10 +286,20 @@ export default function PrivacyPage(): JSX.Element {
             <li>Track recipe interactions (swipes, cooks) to refine the recommendation algorithm</li>
           </ul>
 
-          <SectionH3 label="3.3">AI-Powered Features</SectionH3>
+          <SectionH3 label="3.3">AI-Powered Features and Third-Party AI Data Sharing</SectionH3>
           <p>
-            The Service includes AI-based features. When you use these features, your data
-            is processed as follows:
+            The Service includes AI-powered features. <strong>When you initiate any AI feature,
+            the relevant User Content described below is transmitted to third-party AI service
+            providers.</strong> Specifically, all AI requests are routed through <strong>OpenRouter</strong>
+            (openrouter.ai), which forwards them to <strong>OpenAI</strong> (openai.com) or
+            <strong>Moonshot AI</strong> (moonshot.ai) depending on the feature. By actively using
+            an AI-powered feature, you consent to the relevant User Content being shared with
+            these third-party providers for the purpose of processing your request.
+          </p>
+          <p>
+            We do <strong>not</strong> send your name, email address, or Account identifier to AI
+            providers. Only the minimum User Content necessary for each specific feature is
+            transmitted, as described in the table below:
           </p>
           <div className="overflow-x-auto">
             <table className="min-w-full text-sm">
@@ -295,73 +307,66 @@ export default function PrivacyPage(): JSX.Element {
                 <tr className="border-b">
                   <th className="text-left py-2 pr-4">Feature</th>
                   <th className="text-left py-2 px-2">Data sent to AI</th>
-                  <th className="text-left py-2 px-2">AI Provider</th>
-                  <th className="text-left py-2 pl-4">Model(s)</th>
+                  <th className="text-left py-2 px-2">Third-party recipient</th>
+                  <th className="text-left py-2 pl-4">Model</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b">
-                  <td className="py-2 pr-4">Recipe generation (from preferences)</td>
-                  <td className="py-2 px-2">Your dietary preferences, restrictions, allergies, and pantry contents</td>
-                  <td className="py-2 px-2">OpenRouter</td>
-                  <td className="py-2 pl-4">GPT-4o-mini</td>
-                </tr>
-                <tr className="border-b">
                   <td className="py-2 pr-4">Recipe generation (from pantry ingredients)</td>
                   <td className="py-2 px-2">Selected ingredient names</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">OpenRouter → OpenAI</td>
                   <td className="py-2 pl-4">GPT-4o-mini</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Recipe generation (from macros)</td>
                   <td className="py-2 px-2">Target nutritional goals</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">OpenRouter → OpenAI</td>
                   <td className="py-2 pl-4">GPT-4o-mini</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Cooking step generation</td>
-                  <td className="py-2 px-2">Recipe title, ingredients, and restrictions</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">Recipe title, ingredients, and dietary restrictions</td>
+                  <td className="py-2 px-2">OpenRouter → Moonshot AI</td>
                   <td className="py-2 pl-4">Moonshot Kimi K2</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Shopping list generation</td>
                   <td className="py-2 px-2">Weekly meal plan ingredients and pantry contents</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">OpenRouter → OpenAI</td>
                   <td className="py-2 pl-4">GPT-4o-mini</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Meal photo macro estimation</td>
                   <td className="py-2 px-2">Uploaded meal photograph</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">OpenRouter → OpenAI</td>
                   <td className="py-2 pl-4">GPT-4o (vision)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Receipt / fridge scanning</td>
                   <td className="py-2 px-2">Uploaded photograph</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">OpenRouter → OpenAI</td>
                   <td className="py-2 pl-4">GPT-4o (vision)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Screenshot recipe import</td>
-                  <td className="py-2 px-2">Selected screenshot image (base64, transient)</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">Selected screenshot image (base64, transient — not stored)</td>
+                  <td className="py-2 px-2">OpenRouter → OpenAI</td>
                   <td className="py-2 pl-4">GPT-4o-mini (vision)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-2 pr-4">Recipe text extraction</td>
                   <td className="py-2 px-2">Partial recipe text you type</td>
-                  <td className="py-2 px-2">OpenRouter</td>
+                  <td className="py-2 px-2">OpenRouter → OpenAI</td>
                   <td className="py-2 pl-4">ChatGPT-4o-latest</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p>
-            All AI requests are routed through <strong>OpenRouter</strong> (openrouter.ai),
-            which dispatches to OpenAI and Moonshot models. We do not send your email, name,
-            or Account identifier to AI providers. Only the minimum User Content necessary
-            for the specific feature is transmitted.
+            OpenRouter, OpenAI, and Moonshot AI each have their own privacy policies governing
+            how they handle data received through API calls. We have reviewed their data handling
+            commitments and selected providers that do not train on API-submitted content by default.
           </p>
           <p>
             <strong>Recipe images</strong> displayed in the app are sourced from <strong>Pexels</strong>
